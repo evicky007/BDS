@@ -41,4 +41,6 @@ BDH/
 ├── README.md         # Project documentation
 ```
 ## Output 
-<img width="1436" height="211" alt="image" src="https://github.com/user-attachments/assets/f50913bd-aa65-48e0-acd1-25b3fc589748" />
+<img width="1681" height="458" alt="Screenshot 2025-12-28 214557" src="https://github.com/user-attachments/assets/14423f8c-f4cc-4339-b547-c721b60d6e8c" />
+<img width="1371" height="445" alt="Screenshot 2025-12-28 214624" src="https://github.com/user-attachments/assets/3eda7ec4-1b74-49b8-94d1-4db114433606" />
+
