@@ -38,12 +38,12 @@ print(f"Using device: {device} with dtype {dtype}")
 
 # Configuration
 BDH_CONFIG = bdh.BDHConfig()
-BLOCK_SIZE = 512
-BATCH_SIZE = 32
-MAX_ITERS = 3000
+BLOCK_SIZE = 128
+BATCH_SIZE = 4
+MAX_ITERS = 1000
 LEARNING_RATE = 1e-3
 WEIGHT_DECAY = 0.1
-LOG_FREQ = 100
+LOG_FREQ = 50
 
 input_file_path = os.path.join(os.path.dirname(__file__), "input.txt")
 
@@ -91,7 +91,7 @@ if __name__ == "__main__":
     fetch_data()
 
     model = bdh.BDH(BDH_CONFIG).to(device)
-    model = torch.compile(model)
+   # model = torch.compile(model)
     optimizer = torch.optim.AdamW(
         model.parameters(), lr=LEARNING_RATE, weight_decay=WEIGHT_DECAY
     )
@@ -124,3 +124,8 @@ if __name__ == "__main__":
         errors="backslashreplace"
     )
     print(ret_decoded)
+    # SAVE TRAINED MODEL
+save_path = "bdh_weights.pt"
+torch.save(model.state_dict(), save_path)
+print(f"Trained model saved to {save_path}")
+
